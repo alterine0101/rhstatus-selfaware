@@ -1,0 +1,18 @@
+on:
+  schedule:
+    - cron: "*/10 * * * *"
+  workflow_dispatch: true
+jobs:
+  singularity:
+    runs-on:
+      - self-hosted
+      - "can-fetch"
+      - "can-powershell"
+    steps:
+      - name: checkout repository
+        uses: actions/checkout@v2
+      - name: execute
+        run: ./ping.sh
+        shell: bash
+env:
+  RHSTATUS_PROXY_SECRET: ${{secrets.RHSTATUS_PROXY_SECRET}}
