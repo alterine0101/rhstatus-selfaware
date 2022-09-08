@@ -1,19 +1,19 @@
 #!/bin/bash
 declare -A roothouse0=(
   [device_id]='roothouse-0'
-  [url]='http://192.168.10.10'
+  [url]='http://192.168.1.10'
 )
 declare -A roothouse1=(
   [device_id]='roothouse-1'
-  [url]='http://192.168.10.11'
+  [url]='http://192.168.1.11'
 )
 declare -A roothouse2=(
   [device_id]='roothouse-2'
-  [url]='http://192.168.10.12'
+  [url]='http://192.168.1.12'
 )
 declare -A roothouse3=(
   [device_id]='roothouse-3'
-  [url]='http://192.168.10.13'
+  [url]='http://192.168.1.13'
 )
 declare -n roothouse
 for roothouse in ${!roothouse@}; do
